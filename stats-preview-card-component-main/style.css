@@ -30,8 +30,28 @@ body {
 	margin: 6rem auto;
 }
 
-.container > img {
+.hero-image {
+	position: relative;
 	width: 100%;
+	border-radius: 10px 10px 0 0;
+}
+
+.hero-image::after {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: hsla(277, 64%, 61%, 50%);
+	top: 0;
+	left: 0;
+	display: block;
+	border-radius: 10px 10px 0 0;
+}
+
+.hero-image > img {
+	max-width: 100%;
+	max-height: auto;
+	object-fit: fill;
 	border-radius: 10px 10px 0 0;
 }
 
@@ -73,8 +93,11 @@ body {
 
 .attribution {
 	margin-bottom: 0.7rem;
+	font-size: 11px;
+	text-align: center;
 }
 
 .attribution > a {
 	text-decoration: none;
+	color: hsl(228, 45%, 44%);
 }
